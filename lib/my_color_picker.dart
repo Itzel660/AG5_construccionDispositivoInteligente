@@ -13,7 +13,7 @@ class MyColorPicker extends StatefulWidget {
 }
 
 class _MyColorPickerState extends State<MyColorPicker> {
-  String ipESP = "192.168.1.87";
+  String ipESP = "192.168.1.71";
   Timer? _debounce;
   Color currentColor = const Color.fromARGB(255, 7, 255, 73);
 
@@ -31,6 +31,7 @@ class _MyColorPickerState extends State<MyColorPicker> {
 
   @override
   Widget build(BuildContext context) {
+    
     return ColorPicker(
       pickerColor: currentColor,
       paletteType: PaletteType.hsl,
@@ -50,7 +51,7 @@ class _MyColorPickerState extends State<MyColorPicker> {
     int green = (currentColor.g * 255).round();
     int blue = (currentColor.b * 255).round();
     try {
-      var url = Uri.parse("http://$ipESP/color?r=$red&g=$green&b=$blue");
+      var url = Uri.parse("http://$ipESP/setColor?r=$red&g=$green&b=$blue");
       await http.get(url);
     } catch (e) {
       print("Error obteniendo datos: $e");
