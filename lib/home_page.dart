@@ -55,7 +55,7 @@ void _crearCanalNotificaciones() async {
     'canal_alertas',
     'Alertas Importantes',
     description: 'Canal para notificaciones críticas de alertas',
-    importance: Importance.max, // Asegurar que tiene la prioridad más alta
+    importance: Importance.max, 
     playSound: true,
     enableLights: true,
     enableVibration: true,
@@ -194,13 +194,7 @@ Future<void> mostrarNotificacion(String titulo, String cuerpo) async {
           
 
           children: [
-                        ElevatedButton(
-              onPressed: () {
-                mostrarNotificacion("Prueba", "Esto es una notificación de prueba");
-              },
-              child: Text("Probar Notificación"),
-            ),
-            
+ 
             Padding(padding: const EdgeInsets.all(32.0),),
             Text("Conectado al servidor ESP:", style: TextStyle(fontSize: 15)), 
             Padding(padding:  const EdgeInsets.all(8.0),),
