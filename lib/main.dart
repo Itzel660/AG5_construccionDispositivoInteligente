@@ -2,7 +2,7 @@ import 'splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart'; 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
+//para notificaciones locales
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 

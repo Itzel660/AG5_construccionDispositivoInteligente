@@ -61,13 +61,13 @@ void setup() {
   Serial.print("Dirección IP: ");
   Serial.println(WiFi.localIP());
 
-  // Configurar PWM para el LED RGB
-  ledcAttach(25, 5000, 8); // Rojo
-  ledcAttach(26, 5000, 8); // Verde
-  ledcAttach(27, 5000, 8); // Azul
-  setColor(255, 255, 255); // Inicialmente blanco
 
-  // Configurar rutas del servidor
+  ledcAttach(25, 5000, 8); 
+  ledcAttach(26, 5000, 8); 
+  ledcAttach(27, 5000, 8); 
+  setColor(255, 255, 255); 
+
+ 
   server.on("/sensor", handleSensorData);
   server.on("/setColor", handleSetColor);
   server.begin();
