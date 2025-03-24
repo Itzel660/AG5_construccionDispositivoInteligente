@@ -38,11 +38,20 @@ dependencies:
   fl_chart: ^0.70.2
   sqflite: ^2.4.2
   flutter_colorpicker: ^1.1.0
+  lottie: ^3.3.1
+  flutter_local_notifications: ^19.0.0
+  device_info_plus: ^11.3.3
+  permission_handler: ^11.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
 
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/nube.png" 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -62,8 +71,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/smart.json
+    - assets/nube.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
